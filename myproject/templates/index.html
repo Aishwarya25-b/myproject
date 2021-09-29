@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VTU CGPA/SGPA CALCULATOR</title>
+    <link  rel="stylesheet"  href="{% static '/CSS/this.css' %}">
+</head>
+<body>
+    <header style="background-color: black;">
+       <div class="main">
+           <div class="logo">
+               <img src="{% static 'images/logo.png' %}">
+            </div>   
+          <ul>
+                <li class="active"><a href="home">Home</a></li>
+                &nbsp;&nbsp;
+                <li><a href="about">About</a></li>
+                &nbsp;&nbsp;
+                <li><a href="logout">Logout</a></li>
+          </ul>     
+       </div>  
+       <div class="title">
+           <h1>&nbsp;VTU CGPA & SGPA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CALCULATOR</h1>
+       </div>
+       
+       <div class="button">
+            <a href="cgpa" class="btn">CGPA</a>
+            &nbsp;&nbsp;
+            <a href="sgpa" class="btn">SGPA</a>
+       </div>
+    </header>
+</body>
+</html> 

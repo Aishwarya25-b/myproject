@@ -1,0 +1,275 @@
+{% load static %}
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+
+header{
+    background-image:black;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+ul li :hover{
+    background-color: #fff;
+    color: #000;
+
+}
+
+ul li.active a{
+    background-color: #fff;
+    color: #000;
+
+}
+
+.logo img{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title h1{
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    transform: translate(-15%,-45%);
+}
+
+.title h1{
+    font-style:serif;
+    font-weight: 500;
+    color:white;
+    font-size: 300%;
+    text-decoration: underline white;
+    text-decoration-thickness: 5%;
+    text-underline-offset: 10%;
+}
+
+.paragraph h2{
+    color: white;
+    font-style: serif;
+    font-size: 100%;
+    font-weight: 100;
+}
+
+.paragraph h2{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: translate(-25%,-35%);
+}
+
+.title h3{
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    transform: translate(-35%,-45%);
+
+}
+
+.title h3{
+    font-style:serif;
+    font-weight: 500;
+    color:white;
+    font-size: 200%;
+    text-decoration: underline white;
+    text-decoration-thickness: 5%;
+    text-underline-offset: 10%;
+   
+}
+
+
+.title h4{
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    transform: translate(-40%,-27%);
+}
+
+.title h4{
+    font-style:serif;
+    font-weight: 500;
+    color:white;
+    font-size: 150%;
+    text-decoration: underline white;
+    text-decoration-thickness: 5%;
+    text-underline-offset: 10%;
+}
+
+
+.paragraph h5{
+    color: white;
+    font-style: serif;
+    font-size: 100%;
+    font-weight: 100;
+}
+
+.paragraph h5{
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: translate(-48%,-48%);
+}
+
+.paragraph h6{
+    color: white;
+    font-style: serif;
+    font-size: 100%;
+    font-weight: 100;
+}
+
+.paragraph h6{
+    position: absolute;
+    top: 60%;
+    left: 52%;
+    transform: translate(-60%,-52%);
+}
+
+.title h7{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    transform: translate(-70%,-35%);
+}
+
+.title h7{
+    font-style:serif;
+    font-weight: 500;
+    color:white;
+    font-size: 150%;
+    text-decoration: underline white;
+    text-decoration-thickness: 5%;
+    text-underline-offset: 10%;
+}
+
+
+.paragraph h8{
+    color: white;
+    font-style: serif;
+    font-size: 100%;
+    font-weight: 100;
+}
+
+.paragraph h8{
+    position: absolute;
+    top: 85%;
+    left: 58%;
+    transform: translate(-85%,-58%);
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VTU CGPA/SGPA CALCULATOR</title>
+    <link  rel="stylesheet"  href="About.css">
+</head>
+<body>
+    <header style="background-color: black;">
+       <div class="main">
+           <div class="logo">
+               <img src="{% static 'images/logo.png' %}">
+            </div>   
+          <ul>
+                <li class="active"><a href="home">Home</a></li>
+                &nbsp;&nbsp;
+                <li><a href="logout">Logout</a></li>
+                &nbsp;&nbsp;
+          </ul>
+        </div>
+        
+        <div class="title">
+            <h1>ABOUT</h1>>
+        </div>
+        
+        
+        <div class="paragraph">
+        <h2>CGPA refers to the <mark>cumulative grade point average</mark> which literally translates to the sum total of all your credit points.
+            This system helps in assessing the overall academic performance of a student.Although the evaluation criteria may vary
+            from one country to another,the CGPA system is among the most common evaluation way in most professional/technical courses.</h2>
+        </div>    
+            
+        <div class="title">
+            <h3>Key details on SGPA and CGPA: </h3>
+        </div>  
+
+        <div class="title">
+            <h4>Do you Calculate SGPA?</h4>
+        </div>
+        
+        <div class="paragraph">
+            <h5>SGPA, which stands for <mark>Semester Grade Point Average</mark> is an evaluation method that highlights the semester wise performance of the student.It can be
+            calculated by simply adding all the credit points awarded for the subjects and then dividing it by the total 
+            credits allotted to that semester.</h5>
+            
+         <div class="paragraph">   
+            <h6>Example, in a total of 3 subjects,you scored the following grade points:&nbsp;&nbsp;
+           <mark> Subject 1: 8
+            &nbsp;&nbsp;Subject 2: 6
+            &nbsp;&nbsp;Subject 3: 7
+            &nbsp;&nbsp;The total credit for each subject is 10.</mark>
+            
+            1. Now, first we will multiply, the grade point with the total credit point for each subject:&nbsp;&nbsp;
+            <mark>1: 8*10 = 80
+            &nbsp;&nbsp;Subject 2: 6*10 = 60
+            &nbsp;&nbsp; Subject 3: 7*10 = 70</mark>
+            
+            2. To calculate SGPA here, you need to add all these grade points and then divide it by the total credits, i.e.
+            <mark>Total grade points: 210
+            Total credits: 30
+            To get SGPA, divide grade points by total credits,
+                    =210/30
+                    =7 SGPA</mark></h6>
+            
+                    <div class="title">
+                        <h7>  How to Find CGPA from SGPA?</h7>
+                    </div>
+
+             <div class="paragraph">  
+            <h8>To find CGPA from SGPA, you need to follow this formula:
+            CGPA= (SGPAs of All semesters in an academic year)/ Number
+             of semesters Thus, by adding up all the SGPAs you have got
+            in an academic year by the total number of semesters,
+             you will find CGPA from SGPA.
+            <mark>For example,
+            Suppose that you scored 7 SGPA and 9 SGPA in your two semesters.
+            1. First you need to add both these SGPAs.
+            2. Then, divide the total SGPA with the number of semesters, i.e. 2.
+            Your CGPA would be:
+            CGPA = SGPA of all semesters in a year/Number of semesters
+                = (7+9)/2
+                = 8 CGPA</mark></h8>
+                </div>
+            </body>
+                 
+            </html>

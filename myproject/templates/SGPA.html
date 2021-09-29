@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SGPA CALCULATOR</title>
+    <link  rel="stylesheet"  href="{% static 'CSS/SGPA.css' %}">
+</head>
+<body style="background-color: black;">
+    <header>
+       <div class="main">
+           <div class="logo">
+               <img src="{% static 'images/logo.png' %}">
+            </div>   
+          <ul>
+                <li class="active"><a href="home">Home</a></li>
+                &nbsp;&nbsp;
+                <li><a href="#">About</a></li>
+                &nbsp;&nbsp;
+                <li><a href="logout">Logout</a></li>
+          </ul>     
+       </div>  
+       <div class="title">
+        <h1>&nbsp;&nbsp;&nbsp;VTU SGPA CALCULATION</h1>
+    </div>
+    
+    <div class="title">
+        <h2>ENTER YOUR ALL SUBJECT MARKS</h2>
+    </div>
+
+    <div class="input1">
+        <form action="">
+            <label for="text" name="SUBJECT 1">SUBJECT 1:</label>
+            <input type="number" id="sub1"><br><br>
+
+            <label for="text" name="SUBJECT 2">SUBJECT 2:</label>
+            <input type="number" id="sub2"><br><br>
+
+            <label for="text" name="SUBJECT 3">SUBJECT 3:</label>
+            <input type="number"  id="sub3"><br><br>
+
+            <label for="text" name="SUBJECT 4">SUBJECT 4:</label>
+            <input type="number"  id="sub4"><br><br>
+
+            <label for="text" name="SUBJECT 5">SUBJECT 5:</label>
+            <input type="number"  id="sub5"><br><br>
+
+            <label for="text" name="SUBJECT 6">SUBJECT 6:</label>
+            <input type="number"  id="sub6"><br><br>
+
+            <button type="button" onclick="handleSubmit()">Submit</button>
+
+            </form>
+    </div>
+
+    <div style="margin-top: 300px;" class="input2">
+            <label for="number" name="result" id="res">TOTAL SGPA:</label>
+            <input type="number" id="answer">
+       </div>
+       <script>   
+        function handleSubmit() {
+        const sub1 = document.getElementById('sub1').value
+        const sub2 = document.getElementById('sub2').value
+        const sub3 = document.getElementById('sub3').value
+        const sub4 = document.getElementById('sub4').value
+        const sub5 = document.getElementById('sub5').value
+        const sub6 = document.getElementById('sub6').value
+    
+    
+        const total = +sub1 + +sub2 + +sub3 + +sub4 + +sub5 + +sub6
+        const cgpa = total / 60
+        console.log(sgpa, total)
+        document.getElementById('answer').value = cgpa
+      }
+      </script>
+    </header>   
+</body>
+</html>

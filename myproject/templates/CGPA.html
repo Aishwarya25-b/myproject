@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CGPA CALCULATOR</title>
+    <link  rel="stylesheet"  href="{% static 'CSS/CGPA.css' %}">
+</head>
+<body>
+    <header style="background-color: black;">
+       <div class="main">
+           <div class="logo">
+               <img src="{% static 'images/logo.png' %}">
+            </div>   
+          <ul>
+                <li class="active"><a href="home">Home</a></li>
+                &nbsp;&nbsp;
+                <li><a href="#">About</a></li>
+                &nbsp;&nbsp;
+                <li><a href="logout">Logout</a></li>
+          </ul>     
+       </div>  
+       <div class="title">
+        <h1>&nbsp;&nbsp;&nbsp;VTU CGPA CALCULATION</h1>
+    </div>
+
+    <div class="title">
+        <h2>ENTER YOUR ALL SEMESTER SGPA</h2>
+    </div>
+
+    <div class="title">
+        <h3>*Enter 0 for semester not completed</h3>
+    </div>
+
+    <div class="input1">
+        <form action="">
+            <label for="text" name="SGPA 1">SGPA 1:</label>
+            <input type="number" id="sgpa1"><br><br>
+
+            <label for="text" name="SGPA 2">SGPA 2:</label>
+            <input type="number" id="sgpa2"><br><br>
+
+            <label for="text" name="SGPA 3">SGPA 3:</label>
+            <input type="number" id="sgpa3"><br><br>
+
+            <label for="text" name="SGPA 4">SGPA 4:</label>
+            <input type="number" id="sgpa4"><br><br>
+
+            <label for="text" name="SGPA 5">SGPA 5:</label>
+            <input type="number" id="sgpa5"><br><br>
+
+            <label for="text" name="SGPA 6">SGPA 6:</label>
+            <input type="number" id="sgpa6"><br><br>
+
+            <label for="text" name="SGPA 7">SGPA 7:</label>
+            <input type="number" id="sgpa7"><br><br>
+
+            <label for="text" name="SGPA 8">SGPA 8 :</label>
+            <input type="number" id="sgpa8"><br><br>
+
+            
+            <button type="button" onclick="handleSubmit()">Submit</button>
+        
+            </form>
+    </div>
+
+
+    <div class="input2">
+        <label for="number" name="result" id="res">Total CGPA</label>
+        <input type="number" id="answer">
+      </div>
+
+
+<script>   
+
+    function handleSubmit() {
+    const sgpa1 = document.getElementById('sgpa1').value
+    const sgpa2 = document.getElementById('sgpa2').value
+    const sgpa3 = document.getElementById('sgpa3').value
+    const sgpa4 = document.getElementById('sgpa4').value
+    const sgpa5 = document.getElementById('sgpa5').value
+    const sgpa6 = document.getElementById('sgpa6').value
+    const sgpa7 = document.getElementById('sgpa7').value
+    const sgpa8 = document.getElementById('sgpa8').value
+
+
+    const total = +sgpa1 + +sgpa2 + +sgpa3 + +sgpa4 + +sgpa5 + +sgpa6 + +sgpa7 + +sgpa8
+    const cgpa = total / 8
+    console.log(cgpa, total)
+    document.getElementById('answer').value = cgpa
+  }
+  </script>
+</body>
+
+</html>
